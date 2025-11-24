@@ -1,0 +1,20 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+
+export function useMDXComponents(
+  components: Record<string, { src: string }> = {}
+) {
+  const basePath = process.env.NODE_ENV === "production" ? "/manual-hovet" : "";
+
+  const img = (props: { src: string }) => {
+    const src = props?.src || "";
+    const fixedSrc = src.startsWith("/") ? `${basePath}${src}` : src;
+    return <img {...props} src={fixedSrc} />;
+  };
+
+  return {
+    ...components,
+    img,
+    Image: img,
+  };
+}

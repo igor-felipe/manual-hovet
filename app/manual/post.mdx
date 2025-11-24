@@ -1,0 +1,190 @@
+# Manual SIG-HOVET
+
+### Sistema Integrado de Gestão para Hospitais Veterinários
+
+### 1\. Introdução
+
+Este manual tem como objetivo orientar os usuários na **configuração inicial**, **administração** e **utilização completa** do sistema de gestão do Hospital Veterinário da UFRPE. Aqui você encontrará instruções detalhadas para cadastro, controle de acessos, registro de pacientes, consultas e requisições.
+
+### 2\. Configuração Inicial e Administração do Sistema
+
+A etapa inicial garante que as permissões e funções estejam corretamente definidas para que o sistema seja utilizado com segurança e organização.
+
+#### 2.1 Criação e Cadastro de Cargos
+
+Antes de cadastrar colaboradores (usuários), é necessário criar os cargos que representam as funções dos colaboradores dentro do hospital.
+
+- Acesse a **tela inicial**.
+- Selecione **Cargos**.
+
+![alt text](/manual/image1.png)
+
+
+- Cadastre cada cargo (ex.: Médico Veterinário, etc.).
+- Insira as informações de nome do cargo.
+- É possível especificar uma permissão para cada recurso do sistema.
+- Selecione a área médica (é possível inserir mais de uma área).
+
+\![][image2]
+
+#### 2.2 Funções do Cargo de Admin (Administrador do sistema)
+
+Um colaborador do hospital é designado pela direção do hospital para o cargo de Admin. O administrador possui **responsabilidades essenciais**:
+
+- Cadastro de usuários.
+- Atribuição e edição dos cargos de cada usuário.
+- Controle de permissões: cada cargo determina o que o usuário pode acessar e executar no sistema.
+
+#### 2.3 Cadastro de Colaboradores (Usuários)
+
+Para cadastrar um novo colaborador:
+
+1. Acesse a **tela inicial**.
+2. Clique no ícone de **Colaboradores**.
+
+3. Preencha os dados obrigatórios.
+4. Atribua um cargo ao usuário.
+5. CRMV – é possível informar **ZP** (zootecnista) ou **VP** (veterinário).
+6. É possível também inserir a assinatura digital.
+7. Salve o cadastro.
+
+\![][image4]
+
+---
+
+### 3\. Fluxo de Cadastro de Pacientes e Pré-requisitos
+
+Para registrar consultas, agendamentos ou animais, siga a ordem correta de cadastro.
+
+#### 3.1 Cadastro do Tutor (Pré-requisito)
+
+Antes de registrar animais ou consultas:
+
+- Vá até **a tela incial**.
+- Clique em **Tutores**.
+
+- Preencha os dados básicos (nome, CPF, e-mail, telefone e endereço) e **salve**.
+
+\![][image6]
+
+#### 3.2 Pesquisa de Tutor
+
+Antes de cadastrar um novo tutor, pesquise para evitar duplicidades:
+
+- Utilize o **campo de busca**.
+- A pesquisa pode ser feita por nome, CPF, telefone, entre outros.
+
+\![][image8]
+
+#### 3.3 Cadastro de Animais
+
+Após o tutor estar cadastrado:
+
+1. Essa tela lista todos os animais cadastrados que são vinculados ao tutor. Clique no botão para adicionar um **novo animal** para esse tutor.
+
+\![][image10]
+
+2. Informe dados como nome, espécie, raça, esterilizado (castrado), sexo, data de nascimento.
+3. **Salve** o registro.
+
+---
+
+### 4\. Registro e Gestão de Consultas
+
+O sistema organiza o histórico e permite registrar novas consultas de forma prática.
+
+#### 4.1 Acesso ao Histórico de Consultas
+
+- Acesse **pacientes**.
+- Selecione o **animal desejado**.
+- O sistema exibirá todo o histórico de consultas, procedimentos ou requisições realizadas.
+
+\![][image12]
+
+#### 4.2 Criação de Nova Consulta
+
+Para iniciar uma nova consulta:
+
+1. Entre no perfil do paciente.
+2. Clique em **Registrar**
+3. Em seguida em **Registrar Consulta.**
+
+\![][image14]
+
+#### 4.3 Registro da Consulta
+
+Durante o preenchimento:
+
+- Preencha todos os **campos obrigatórios**, como Área, tipo de consulta, peso do animal e caso tenha sido uma consulta externa (fora do hospital), insira a distância.
+
+- É possível incluir ou diagnóstico temporário e/ou definitivo da consulta, mas é obrigatório inserir ao menos um.
+
+\![][image16]
+
+- Para inserir as requisições, selecione o ícone:
+
+#### 4.4 Anamnese e Exame Físico
+
+- O sistema permite inserir **textos personalizados**.
+- Modelos de anamnese e exame físico podem ser utilizados para agilizar o processo – Veja na secção “Modelos de texto”.
+
+\![][image18]
+
+---
+
+### 5\. Requisições e Configuração de Itens
+
+As requisições estão integradas ao registro da consulta e incluem exames, procedimentos e solicitações internas.
+
+#### 5.1 Inclusão de Nova Requisição (Somente Admin)
+
+Se algum item não existir no sistema:
+
+1. O administrador deve acessar **Configurações**.
+
+2. Selecionar **Tipo** (ex.: Anestesiologia).
+3. Cadastrar o novo item
+
+\![][image20]
+
+- O sistema exibirá todas as requisições disponíveis daquela área.
+- Novas requisições podem ser adicionadas conforme necessário.
+
+#### 5.2 Inclusão de Novas Áreas
+
+Caso surja uma nova especialidade ou setor:
+
+1. Acesse **Configurações**.
+   \![][image22]
+2. Selecione **Áreas**.
+3. Cadastre a nova área.
+
+---
+
+### 6\. Modelos de Texto
+
+#### 6.1 O que são Modelos de texto?
+
+Os **modelos de texto** permitem agilizar o preenchimento de consultas, procedimentos, documentos, receituários e requisições. Eles funcionam como textos pré-formatados onde o usuário pode inserir **tags automáticas**, que são preenchidas pelo sistema conforme os dados do paciente, tutor ou profissional.
+
+- Selecione **Modelos**.
+
+\![][image24]
+
+- Escolha o tipo de modelo desejado:
+
+#### 6.2 Utilização de Tags Automáticas
+
+Ao criar ou editar um modelo, é possível inserir **tags personalizadas**. Essas tags são substituídas automaticamente pelos dados reais quando o modelo é utilizado em uma consulta ou procedimento.
+
+As tags ajudam a **padronizar documentos** e **reduzir tempo de digitação**.
+
+Exemplos de tags disponíveis:
+
+\![][image26]
+
+Clique no ícone abaixo para criar:
+
+Em seguida, clique no ícone “Atualizar” para verificar o resultado:
+
+\![][image28]
