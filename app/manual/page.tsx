@@ -1,4 +1,4 @@
-import Post from "@/content/post1.mdx";
+import Post from "./post1.mdx";
 
 export default function Page() {
   return (

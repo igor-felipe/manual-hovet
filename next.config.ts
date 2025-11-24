@@ -6,5 +6,7 @@ const withMDX = createMDX({
 
 export default withMDX({
   output: "export",
+  basePath: process.env.NODE_ENV === "production" ? "/manual-hovet" : "",
+  distDir: "dist",
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 });
