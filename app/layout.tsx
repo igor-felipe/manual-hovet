@@ -24,16 +24,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-zinc-100`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{
+          background: "linear-gradient(135deg, #8bc4b0 0%, #5da88c 25%, #3d8f72 50%, #2a7d5f 75%, #0a5a4b 100%)"
+        }}
       >
-        <header>
-          <Menu />
-        </header>
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <Menu />
+        <main className="flex items-start justify-center min-h-screen pt-8 pb-16">
           {children}
-        </div>
+        </main>
       </body>
     </html>
   );

@@ -2,7 +2,7 @@ import Post from "./post.mdx";
 
 export default function Page() {
   return (
-    <article className="prose container max-w-5xl p-12 my-4 md:px-20 text-justify bg-white">
+    <article className="prose prose-lg max-w-5xl px-12 py-12 mx-4 text-justify bg-gray-50 rounded-2xl shadow-lg border border-gray-200">
       <Post />
     </article>
   );
