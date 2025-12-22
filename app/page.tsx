@@ -1,9 +1,9 @@
+import Home from "./home.mdx";
+
 export default function Page() {
   return (
-    <div className="flex h-full items-center justify-center ">
-      <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-        Em construção
-      </h1>
-    </div>
+    <article className="prose prose-lg max-w-5xl px-12 py-12 mx-4 text-justify bg-gray-50 rounded-2xl shadow-lg border border-gray-200">
+      <Home />
+    </article>
   );
 }
