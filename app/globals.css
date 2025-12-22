@@ -116,6 +116,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -123,11 +124,50 @@
 
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
-      display: none;
+    display: none;
   }
+
   .no-scrollbar {
-      -ms-overflow-style: none; 
-      scrollbar-width: none;     
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  .prose h1 {
+    @apply text-[#0A5A4B];
+    font-weight: 650 !important;
+  }
+
+  .prose h2 {
+    @apply text-[#0A5A4B];
+    font-weight: 650 !important;
+  }
+
+  .prose h3 {
+    @apply text-emerald-700;
+    font-weight: 650 !important;
+  }
+
+  .prose strong {
+    @apply text-[#0A5A4B] font-bold;
+  }
+
+  .prose a {
+    color: #0A5A4B !important;
+    text-decoration: underline !important;
+  }
+
+  .prose a:hover {
+    color: #084539 !important;
+  }
+
+  .prose ul>li::marker {
+    @apply text-[#0A5A4B];
+  }
+
+  .prose ol>li::marker {
+    @apply text-[#0A5A4B] font-bold;
   }
 }
 
