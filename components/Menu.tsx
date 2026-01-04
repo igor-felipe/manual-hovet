@@ -63,7 +63,7 @@ export const Menu = () => {
   }, [pathname]);
 
   return (
-    <div className="sticky top-0 z-50 flex items-start px-4 sm:px-6 sm:justify-center py-3 border-b border-gray-200 bg-white/80 backdrop-blur-md shadow-sm overflow-x-auto no-scrollbar">
+    <div className="sticky top-0 z-50 flex items-start px-4 sm:px-6 sm:justify-center py-3 border-b border-gray-200 bg-white/80 backdrop-blur-md shadow-sm overflow-x-auto no-scrollbar touch-pan-x overscroll-x-contain">
       <NavigationMenu>
         <div ref={navRef} className="relative">
           <NavigationMenuList className="flex-nowrap gap-6">
