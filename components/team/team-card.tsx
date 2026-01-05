@@ -12,9 +12,9 @@ export function TeamCard({ member }: TeamCardProps) {
     <div className="w-full max-w-sm rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:shadow-lg">
       <div className="flex flex-col items-center p-6 text-center">
         <div className="mb-4">
-          {member.avatarUrl ? (
+          {member.githubUrl + ".png" ? (
             <img
-              src={member.avatarUrl}
+              src={member.avatarUrl ?? member.githubUrl + ".png"}
               alt={member.name}
               className="h-24 w-24 rounded-full border-4 border-white shadow-md"
             />
@@ -25,7 +25,6 @@ export function TeamCard({ member }: TeamCardProps) {
           )}
         </div>
         <h3 className="text-xl font-bold">{member.name}</h3>
-        <p className="text-sm text-muted-foreground">{member.role}</p>
       </div>
       
       {member.bio && (

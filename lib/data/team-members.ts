@@ -2,43 +2,44 @@ import { TeamMember } from '@/lib/types/team';
 
 export const teamMembers: TeamMember[] = [
   {
-    id: 1,
-    name: 'Igor Felipe',
-    githubUrl: 'https://github.com/igor-felipe',
-    role: 'Desenvolvedor',
-    bio: 'Desenvolvedor especializado em React e Next.js',
-    avatarUrl: 'https://github.com/igor-felipe.png'
+    name: 'Jéssica Cristina',
+    githubUrl: 'https://github.com/jessicacristinams',
+    bio: 'Gerente de projeto',
   },
   {
-    id: 2,
     name: 'Igor Felipe',
     githubUrl: 'https://github.com/igor-felipe',
-    role: 'Desenvolvedor',
-    bio: 'Desenvolvedor especializado em React e Next.js',
-    avatarUrl: 'https://github.com/igor-felipe.png'
+    bio: 'Lider Técnico',
   },
   {
-    id: 3,
-    name: 'Igor Felipe',
-    githubUrl: 'https://github.com/igor-felipe',
-    role: 'Desenvolvedor',
+    
+    name: 'Luca Lemos',
+    githubUrl: 'https://github.com/LucaLemos',
     bio: 'Desenvolvedor especializado em React e Next.js',
-    avatarUrl: 'https://github.com/igor-felipe.png'
+    avatarUrl: 'https://github.com/LucaLemos.png'
   },
   {
-    id: 4,
-    name: 'Igor Felipe',
-    githubUrl: 'https://github.com/igor-felipe',
-    role: 'Desenvolvedor',
+    
+    name: 'Pedro Figueira',
+    githubUrl: 'https://github.com/PepeuFBV',
     bio: 'Desenvolvedor especializado em React e Next.js',
-    avatarUrl: 'https://github.com/igor-felipe.png'
   },
   {
-    id: 5,
-    name: 'Igor Felipe',
-    githubUrl: 'https://github.com/igor-felipe',
-    role: 'Desenvolvedor',
+    
+    name: 'Thomas Lemos',
+    githubUrl: 'https://github.com/ThomasLemos',
     bio: 'Desenvolvedor especializado em React e Next.js',
-    avatarUrl: 'https://github.com/igor-felipe.png'
+  },
+  {
+    
+    name: 'Thiago Rozendo',
+    githubUrl: 'https://github.com/ThiagoRozendo',
+    bio: 'Desenvolvedor especializado em React e Next.js',
+  },
+  {
+    
+    name: 'Robson Medeiros',
+    githubUrl: 'https://github.com/robson-medeiros',
+    bio: 'Orientador',
   },
 ];
