@@ -2,8 +2,8 @@ import Releases from "./releases.mdx";
 
 export default function Page() {
   return (
-    <article className="prose container max-w-5xl p-12 my-4 md:px-20 text-justify bg-white">
+    <div className="prose max-w-5xl px-12 py-12 mx-4 bg-gray-50 rounded-2xl shadow-lg border border-gray-200 w-full">
       <Releases />
-    </article>
+    </div>
   );
 }

@@ -20,10 +20,6 @@ export const menuItems = {
     title: "Manual",
     url: "/manual",
   },
-  team: {
-    title: "Equipe",
-    url: "/team",
-  },
   timeline: {
     title: "Cronograma",
     url: "/timeline",
@@ -35,6 +31,10 @@ export const menuItems = {
   questions: {
     title: "Suporte",
     url: "/support",
+  },
+  team: {
+    title: "Equipe",
+    url: "/team",
   },
 };
 
