@@ -134,6 +134,10 @@
 }
 
 @layer components {
+  .prose p {
+    text-align: justify;
+  }
+
   .prose h1 {
     @apply text-[#0A5A4B];
     font-weight: 650 !important;

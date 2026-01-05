@@ -24,9 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="overscroll-none">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overscroll-none`}
+
         style={{
           background: "linear-gradient(135deg, #8bc4b0 0%, #5da88c 25%, #3d8f72 50%, #2a7d5f 75%, #0a5a4b 100%)"
         }}
