@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 
+import DriveVideo from "./components/DriveVideo";
+
 export function useMDXComponents(
   components: Record<string, { src: string }> = {}
 ) {
@@ -13,6 +15,7 @@ export function useMDXComponents(
   };
 
   return {
+    DriveVideo,
     ...components,
     img,
     Image: img,
