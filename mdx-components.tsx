@@ -6,7 +6,9 @@ import DriveVideo from "./components/DriveVideo";
 export function useMDXComponents(
   components: Record<string, { src: string }> = {}
 ) {
-  const basePath = process.env.NODE_ENV === "production" ? "/manual-hovet" : "";
+ // desativado para usar dominio personalizado projeto.sig-hovet.site
+ // const basePath = process.env.NODE_ENV === "production" ? "/manual-hovet" : "";
+  const basePath = process.env.NODE_ENV === "production" ? "" : "";
 
   const img = (props: { src: string }) => {
     const src = props?.src || "";

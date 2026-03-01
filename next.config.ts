@@ -4,7 +4,9 @@ const withMDX = createMDX({
   extension: /\.mdx?$/,
 });
 
-const basePath = process.env.NODE_ENV === "production" ? "/manual-hovet" : "";
+ // desativado para usar dominio personalizado projeto.sig-hovet.site
+ // const basePath = process.env.NODE_ENV === "production" ? "/manual-hovet" : "";
+const basePath = process.env.NODE_ENV === "production" ? "" : "";
 
 export default withMDX({
   output: "export",
