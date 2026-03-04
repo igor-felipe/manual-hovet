@@ -117,8 +117,12 @@
     @apply border-border outline-ring/50;
   }
 
+  html {
+    @apply text-sm;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-sm leading-6;
   }
 }
 
@@ -134,23 +138,37 @@
 }
 
 @layer components {
+  .prose {
+    @apply text-sm leading-6;
+  }
+
   .prose p {
+    @apply text-sm leading-6;
     text-align: justify;
   }
 
   .prose h1 {
-    @apply text-[#0A5A4B];
-    font-weight: 650 !important;
+    @apply text-xl md:text-2xl text-[#0A5A4B] font-semibold tracking-tight;
   }
 
   .prose h2 {
-    @apply text-[#0A5A4B];
-    font-weight: 650 !important;
+    @apply text-lg md:text-xl text-[#0A5A4B] font-semibold tracking-tight;
   }
 
   .prose h3 {
-    @apply text-emerald-700;
-    font-weight: 650 !important;
+    @apply text-base md:text-lg text-emerald-700 font-medium tracking-tight;
+  }
+
+  .prose h4 {
+    @apply text-sm md:text-base text-emerald-700 font-medium;
+  }
+
+  .prose h5 {
+    @apply text-sm text-emerald-700 font-medium;
+  }
+
+  .prose h6 {
+    @apply text-sm text-emerald-700 font-medium;
   }
 
   .prose strong {
@@ -174,7 +192,5 @@
     @apply text-[#0A5A4B] font-bold;
   }
 }
-
-@import "tailwindcss";
 
 @plugin "@tailwindcss/typography";

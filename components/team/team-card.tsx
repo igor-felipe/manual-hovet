@@ -2,6 +2,7 @@
 import { TeamMember } from '@/lib/types/team';
 import { Github, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import { BodyText, SubsectionTitle } from "@/components/typography";
 
 interface TeamCardProps {
   member: TeamMember;
@@ -24,12 +25,12 @@ export function TeamCard({ member }: TeamCardProps) {
             </div>
           )}
         </div>
-        <h3 className="text-xl font-bold">{member.name}</h3>
+        <SubsectionTitle className="text-base">{member.name}</SubsectionTitle>
       </div>
       
       {member.bio && (
         <div className="px-6 pb-4">
-          <p className="text-center text-sm">{member.bio}</p>
+          <BodyText className="text-center">{member.bio}</BodyText>
         </div>
       )}
       

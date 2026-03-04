@@ -63,7 +63,7 @@ export const Menu = () => {
   }, [pathname]);
 
   return (
-    <div className="sticky top-0 z-50 flex items-start px-4 sm:px-6 sm:justify-center py-3 border-b border-gray-200 bg-white/80 backdrop-blur-md shadow-sm overflow-x-auto no-scrollbar touch-pan-x overscroll-x-contain">
+    <div className="sticky top-0 z-50 flex items-start px-4 sm:px-6 sm:justify-center py-1 border-b border-gray-200 bg-white shadow-sm overflow-x-auto no-scrollbar touch-pan-x overscroll-x-contain">
       <NavigationMenu>
         <div ref={navRef} className="relative">
           <NavigationMenuList className="flex-nowrap gap-6">
@@ -75,11 +75,10 @@ export const Menu = () => {
                 <NavigationMenuItem key={key} className="flex-shrink-0">
                   <NavigationMenuLink
                     href={menuItems[key].url}
-                    className={`font-semibold transition-colors whitespace-nowrap ${isActive
+                    className={`font-medium text-lg transition-colors whitespace-nowrap ${isActive
                       ? "text-[#0A5A4B]"
-                      : "text-gray-700 hover:text-[#0A5A4B] hover:bg-emerald-50/50 rounded-md"
+                      : "hover:text-[#0A5A4B] hover:bg-emerald-50/50 rounded-md"
                       }`}
-                    style={{ fontSize: "1.17rem" }}
                   >
                     {menuItems[key].title}
                   </NavigationMenuLink>
