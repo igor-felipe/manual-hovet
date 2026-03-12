@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import {
   NavigationMenu,
@@ -8,38 +8,29 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
-const PRIMARY_GREEN = "#0A5A4B";
+const INDICATOR_COLOR = "#FFFFFF";
 
 export const menuItems = {
-  home: {
-    title: "Home",
-    url: "/",
-  },
-  manual: {
-    title: "Manual",
-    url: "/manual",
-  },
-  timeline: {
-    title: "Cronograma",
-    url: "/timeline",
-  },
-  releases: {
-    title: "Atualizações",
-    url: "/releases",
-  },
-  questions: {
-    title: "Suporte",
-    url: "/support",
-  },
-  team: {
-    title: "Equipe",
-    url: "/team",
-  },
+  home: { title: "SIG-HOVET", url: "/" },
+  manual: { title: "Manual", url: "/manual" },
+  timeline: { title: "Cronograma", url: "/timeline" },
+  releases: { title: "Atualizações", url: "/releases" },
+  // questions: { title: "Suporte", url: "/support" },
+  team: { title: "Equipe", url: "/team" },
 };
 
 export const Menu = () => {
   const pathname = usePathname();
+  const router = useRouter();
+
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -50,53 +41,77 @@ export const Menu = () => {
       `a[href="${pathname}"]`
     ) as HTMLAnchorElement;
 
-    if (activeLink) {
-      const container = navRef.current;
-      const containerRect = container.getBoundingClientRect();
-      const linkRect = activeLink.getBoundingClientRect();
+    if (!activeLink) return;
 
-      const left = linkRect.left - containerRect.left;
-      const width = linkRect.width;
+    const container = navRef.current;
+    const containerRect = container.getBoundingClientRect();
+    const linkRect = activeLink.getBoundingClientRect();
 
-      setIndicatorStyle({ left, width });
-    }
+    const left = linkRect.left - containerRect.left;
+    const width = linkRect.width;
+
+    setIndicatorStyle({ left, width });
   }, [pathname]);
 
   return (
-    <div className="sticky top-0 z-50 flex items-start px-4 sm:px-6 sm:justify-center py-1 border-b border-gray-200 bg-white shadow-sm overflow-x-auto no-scrollbar touch-pan-x overscroll-x-contain">
-      <NavigationMenu>
-        <div ref={navRef} className="relative">
-          <NavigationMenuList className="flex-nowrap gap-6">
-            {Object.keys(menuItems).map((e) => {
-              const key = e as keyof typeof menuItems;
-              const isActive = pathname === menuItems[key].url;
+    <div className="sticky top-0 z-50 bg-emerald-900/90 text-white backdrop-blur-sm">
 
-              return (
-                <NavigationMenuItem key={key} className="flex-shrink-0">
-                  <NavigationMenuLink
-                    href={menuItems[key].url}
-                    className={`font-medium text-lg transition-colors whitespace-nowrap ${isActive
-                      ? "text-[#0A5A4B]"
-                      : "hover:text-[#0A5A4B] hover:bg-emerald-50/50 rounded-md"
-                      }`}
-                  >
-                    {menuItems[key].title}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              );
-            })}
-          </NavigationMenuList>
+      {/* MOBILE */}
+      <div className="relative sm:hidden">
+        <Select value={pathname} onValueChange={(value) => router.push(value)}>
+          <SelectTrigger className="h-12! w-full [&_svg]:text-white! [&_svg]:opacity-100! justify-center border-none bg-emerald-900 text-lg text-white shadow-none focus-visible:border-none focus-visible:ring-0">
+            <SelectValue
+              placeholder="Navegação"
+              className="text-center"
+            />
+          </SelectTrigger>
 
-          <div
-            className="absolute bottom-0 h-[3px] rounded-full transition-all duration-500 ease-out"
-            style={{
-              left: `${indicatorStyle.left}px`,
-              width: `${indicatorStyle.width}px`,
-              backgroundColor: PRIMARY_GREEN,
-            }}
-          />
-        </div>
-      </NavigationMenu>
+          <SelectContent
+            position="popper"
+            collisionPadding={0}
+          >
+            {Object.entries(menuItems).map(([key, item]) => (
+              <SelectItem key={key} value={item.url}>
+                {item.title}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* DESKTOP */}
+      <div className="hidden sm:flex items-start justify-center px-4 py-1">
+        <NavigationMenu>
+          <div ref={navRef} className="relative">
+            <NavigationMenuList className="gap-6">
+              {Object.keys(menuItems).map((e) => {
+                const key = e as keyof typeof menuItems;
+                return (
+                  <NavigationMenuItem key={key}>
+                    <NavigationMenuLink
+                      href={menuItems[key].url}
+                      className={`relative whitespace-nowrap px-1 text-lg font-medium transition-colors rounded-sm
+                         focus:bg-emerald-900 focus:text-white hover:text-emerald-900 hover:border-white/70`}
+
+                    >
+                      {menuItems[key].title}
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                );
+              })}
+            </NavigationMenuList>
+
+            <div
+              className="absolute bottom-0 h-[3px] rounded-full transition-all duration-500 ease-out"
+              style={{
+                left: `${indicatorStyle.left}px`,
+                width: `${indicatorStyle.width}px`,
+                backgroundColor: INDICATOR_COLOR,
+              }}
+            />
+          </div>
+        </NavigationMenu>
+      </div>
     </div>
   );
 };

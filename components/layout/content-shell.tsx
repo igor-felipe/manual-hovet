@@ -1,28 +1,31 @@
+import { TypographyContent } from "@/components/typography";
 import { cn } from "@/lib/utils";
 
 type ContentShellProps = {
   children: React.ReactNode;
   className?: string;
-  prose?: boolean;
   fullWidth?: boolean;
 };
 
 export function ContentShell({
   children,
   className,
-  prose = false,
   fullWidth = false,
 }: ContentShellProps) {
   return (
     <div
       className={cn(
-        "mx-4 max-w-5xl rounded-md border border-gray-200 bg-gray-50 px-12 py-12 shadow-lg",
-        prose && "prose prose-sm",
+        [
+          "mx-auto w-full",
+          fullWidth ? "max-w-none" : "max-w-[72ch] sm:max-w-[96ch] lg:max-w-[120ch]",
+          "px-4 xl:px-10 pb-8",
+          "rounded-sm border-gray-200 bg-white shadow-lg",
+        ].join(" "),
         fullWidth && "w-full",
         className
       )}
     >
-      {children}
+      {<TypographyContent>{children}</TypographyContent>}
     </div>
   );
 }

@@ -33,7 +33,7 @@ export default function RootLayout({
         }}
       >
         <Menu />
-        <main className="flex items-start justify-center min-h-screen pt-8 pb-16">
+        <main className="">
           {children}
         </main>
       </body>

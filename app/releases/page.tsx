@@ -1,10 +1,10 @@
-import Releases from "./releases.mdx";
+import ReleasesContent from "./releases-content";
 import { ContentShell } from "@/components/layout/content-shell";
 
 export default function Page() {
   return (
-    <ContentShell prose fullWidth>
-      <Releases />
+    <ContentShell  >
+      <ReleasesContent />
     </ContentShell>
   );
 }

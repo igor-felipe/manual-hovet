@@ -2,13 +2,7 @@ import { TeamMember } from '@/lib/types/team';
 
 export const teamMembers: TeamMember[] = [
   {
-    name: 'Jéssica Cristina', githubUrl: 'https://github.com/jessicacristinams', bio: 'Gerente de projeto',
-  },
-  {
     name: 'Igor Felipe', githubUrl: 'https://github.com/igor-felipe', bio: 'Líder Técnico',
-  },
-  {
-    name: 'Pedro Figueira', githubUrl: 'https://github.com/PepeuFBV', bio: 'DevOps',
   },
   {
     name: 'Thomas Lemos', githubUrl: 'https://github.com/ThomasLemos', bio: 'Desenvolvedor especializado em React e Next.js',

@@ -1,10 +1,8 @@
-import Home from "./home.mdx";
-import { ContentShell } from "@/components/layout/content-shell";
+import { TypographyContent } from "@/components/typography";
+import HomeContent from "./home-content";
 
 export default function Page() {
   return (
-    <ContentShell prose>
-      <Home />
-    </ContentShell>
+    <TypographyContent className=""><HomeContent /></TypographyContent>
   );
 }

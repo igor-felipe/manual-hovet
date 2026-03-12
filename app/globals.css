@@ -118,7 +118,7 @@
   }
 
   html {
-    @apply text-sm;
+    @apply text-lg;
   }
 
   body {
@@ -134,62 +134,6 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-}
-
-@layer components {
-  .prose {
-    @apply text-sm leading-6;
-  }
-
-  .prose p {
-    @apply text-sm leading-6;
-    text-align: justify;
-  }
-
-  .prose h1 {
-    @apply text-xl md:text-2xl text-[#0A5A4B] font-semibold tracking-tight;
-  }
-
-  .prose h2 {
-    @apply text-lg md:text-xl text-[#0A5A4B] font-semibold tracking-tight;
-  }
-
-  .prose h3 {
-    @apply text-base md:text-lg text-emerald-700 font-medium tracking-tight;
-  }
-
-  .prose h4 {
-    @apply text-sm md:text-base text-emerald-700 font-medium;
-  }
-
-  .prose h5 {
-    @apply text-sm text-emerald-700 font-medium;
-  }
-
-  .prose h6 {
-    @apply text-sm text-emerald-700 font-medium;
-  }
-
-  .prose strong {
-    @apply text-[#0A5A4B] font-bold;
-  }
-
-  .prose a {
-    color: #0A5A4B !important;
-    text-decoration: underline !important;
-  }
-
-  .prose a:hover {
-    color: #084539 !important;
-  }
-
-  .prose ul>li::marker {
-    @apply text-[#0A5A4B];
-  }
-
-  .prose ol>li::marker {
-    @apply text-[#0A5A4B] font-bold;
   }
 }
 

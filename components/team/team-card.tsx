@@ -2,7 +2,6 @@
 import { TeamMember } from '@/lib/types/team';
 import { Github, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
-import { BodyText, SubsectionTitle } from "@/components/typography";
 
 interface TeamCardProps {
   member: TeamMember;
@@ -10,7 +9,7 @@ interface TeamCardProps {
 
 export function TeamCard({ member }: TeamCardProps) {
   return (
-    <div className="w-full max-w-sm rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:shadow-lg">
+    <div className="w-full max-w-sm  border bg-card text-card-foreground shadow-sm transition-all hover:shadow-lg">
       <div className="flex flex-col items-center p-6 text-center">
         <div className="mb-4">
           {member.githubUrl + ".png" ? (
@@ -25,12 +24,12 @@ export function TeamCard({ member }: TeamCardProps) {
             </div>
           )}
         </div>
-        <SubsectionTitle className="text-base">{member.name}</SubsectionTitle>
+        <h3 className="text-lg font-semibold">{member.name}</h3>
       </div>
       
       {member.bio && (
         <div className="px-6 pb-4">
-          <BodyText className="text-center">{member.bio}</BodyText>
+          <p className="text-center text-sm leading-6">{member.bio}</p>
         </div>
       )}
       
@@ -39,7 +38,7 @@ export function TeamCard({ member }: TeamCardProps) {
           href={member.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+          className="flex items-center gap-2  bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
         >
           <Github className="h-4 w-4" />
           Ver perfil no GitHub
