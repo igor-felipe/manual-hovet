@@ -1,4 +1,3 @@
-import { BodyText, PageTitle } from "@/components/typography";
 import { cn } from "@/lib/utils";
 
 type SectionHeaderProps = {
@@ -20,17 +19,18 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <header className={cn("mb-8 space-y-2", centered && "text-center", className)}>
-      <PageTitle className={titleClassName}>{title}</PageTitle>
+      <h1 className={cn("h1", titleClassName)}>{title}</h1>
       {subtitle ? (
-        <BodyText
+        <p
           className={cn(
+            "p",
             "text-muted-foreground",
             centered && "mx-auto max-w-2xl",
             subtitleClassName
           )}
         >
           {subtitle}
-        </BodyText>
+        </p>
       ) : null}
     </header>
   );

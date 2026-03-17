@@ -54,7 +54,7 @@ export const Menu = () => {
   }, [pathname]);
 
   return (
-    <div className="sticky top-0 z-50 bg-emerald-900/90 text-white backdrop-blur-sm">
+    <div data-top-menu="true" className="sticky top-0 z-50 bg-emerald-900/90 text-white backdrop-blur-sm">
 
       {/* MOBILE */}
       <div className="relative sm:hidden">
@@ -80,7 +80,7 @@ export const Menu = () => {
       </div>
 
       {/* DESKTOP */}
-      <div className="hidden sm:flex items-start justify-center px-4 py-1">
+      <div className="hidden sm:flex items-start justify-center px-4 py-2">
         <NavigationMenu>
           <div ref={navRef} className="relative">
             <NavigationMenuList className="gap-6">

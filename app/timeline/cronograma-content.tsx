@@ -1,32 +1,31 @@
-import * as T from "@/components/typography";
 
 export default function CronogramaContent() {
   return (
     <>
-      <T.HR />
-      <T.P>
+      <hr />
+      <p>
         Documento de referência para funcionalidades planejadas e melhorias
         previstas do projeto.
-      </T.P>
+      </p>
 
-      <T.HR />
+      <hr />
 
-      <T.P>Ainda sem data prevista</T.P>
+      <p>Ainda sem data prevista</p>
 
-      <T.UL>
-        <T.LI>
-          <T.Strong>Registro de internações</T.Strong>.
-        </T.LI>
-        <T.LI>
-          <T.Strong>Módulo de gestão de farmácia</T.Strong>.
-        </T.LI>
-        <T.LI>
-          <T.Strong>Modulo de agendamento</T.Strong>.
-        </T.LI>
-        <T.LI>
-          <T.Strong>Ponto eletrônico</T.Strong>.
-        </T.LI>
-      </T.UL>
+      <ul>
+        <li>
+          <strong>Registro de internações</strong>.
+        </li>
+        <li>
+          <strong>Módulo de gestão de farmácia</strong>.
+        </li>
+        <li>
+          <strong>Modulo de agendamento</strong>.
+        </li>
+        <li>
+          <strong>Ponto eletrônico</strong>.
+        </li>
+      </ul>
     </>
   );
 }

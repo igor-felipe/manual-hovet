@@ -1,63 +1,113 @@
-import * as T from "@/components/typography";
-
 export default function ReleasesContent() {
   return (
     <>
+      <>
+        <hr />
+        <p>
+          <em>18/03/2026</em>
+        </p>
+        <ul>
+          <li>A tag de cabeçalho agora usa o logo do DMV-UFRPE ao invés do logo da medicina veterinária </li>
+          <li>Adição de tag de rodapé</li>
+          <li>As tags dos modelos foram renomeadas e reorganizadas</li>
+          <li>
+            Corrigido o problema de algumas tags que não eram substituídas pelos valores reais. 
+          </li>
+        </ul>
+      </>
+      <>
+        <hr />
 
-      <T.HR />
+        <p>
+          <em>17/03/2026</em>
+        </p>
 
-      <T.P>
-        <T.EM>Publicado em 18/02/2026</T.EM>
-      </T.P>
+        <h3>Atualização do manual</h3>
+        <ul>
+          <li>Um sumário foi adicionado no manual para facilitar a leitura</li>
+          <li>
+            O conteúdo do manual foi atualizado, mas ainda há muito o que fazer
+          </li>
+        </ul>
+      </>
+      <>
+        <hr />
 
-      <T.H3>Novos Recursos</T.H3>
+        <p>
+          <em>16/03/2026</em>
+        </p>
 
-      <T.UL>
-        <T.LI>
-          <T.Strong>Tags de Imagem:</T.Strong> Adição de 10 tags (0 a 9) que são
-          substituídas automaticamente por imagens em anexo, desde que os nomes
-          dos arquivos correspondam às tags.
-        </T.LI>
-        <T.LI>
-          <T.Strong>Visualizador de Imagens:</T.Strong> Agora, ao clicar em uma imagem
-          anexada, ela será exibida e terá suporte a <T.Strong>zoom</T.Strong>.
-        </T.LI>
-        <T.LI>
-          <T.Strong>Redimensionamento Automático configurável:</T.Strong> Para otimizar o
-          armazenamento do sistema, agora as imagens em anexo são redimensionadas
-          automaticamente no momento da seleção. Utilizando modelos é possível criar
-          configurações específicas de Largura Máxima, Altura Máxima e Qualidade
-          para cada tipo de exame de imagem.
-        </T.LI>
-      </T.UL>
+        <ul>
+          <li>
+            <strong>Definição direta de número de prontuário</strong> . Se o
+            paciente já tiver cadastro no hospital, agora é possível definir
+            esse número no momento do cadastro. Se o paciente é novo, então
+            deixe o campo em branco que o sistema vai gerar o número
+            automaticamente seguindo a sequência.
+          </li>
+        </ul>
+      </>
+      <>
+        <hr />
 
-      <T.H3>Mudanças</T.H3>
+        <p>
+          <em>18/02/2026</em>
+        </p>
 
-      <T.UL>
-        <T.LI>
-          <T.Strong>Fluxo de Salvamento:</T.Strong> Ao salvar cadastros (paciente,
-          tutor, colaborador, consulta, etc.), o sistema <T.Strong>não redireciona</T.Strong>{" "}
-          mais para a página anterior, mantendo o usuário na página atual.
-        </T.LI>
-      </T.UL>
+        <h3>Novos Recursos</h3>
 
-      <T.H3>Correção de Bugs</T.H3>
+        <ul>
+          <li>
+            <strong>Tags de Imagem:</strong> Adição de 10 tags (0 a 9) que são
+            substituídas automaticamente por imagens em anexo, desde que os
+            nomes dos arquivos correspondam às tags.
+          </li>
+          <li>
+            <strong>Visualizador de Imagens:</strong> Agora, ao clicar em uma
+            imagem anexada, ela será exibida e terá suporte a{" "}
+            <strong>zoom</strong>.
+          </li>
+          <li>
+            <strong>Redimensionamento Automático configurável:</strong> Para
+            otimizar o armazenamento do sistema, agora as imagens em anexo são
+            redimensionadas automaticamente no momento da seleção. Utilizando
+            modelos é possível criar configurações específicas de Largura
+            Máxima, Altura Máxima e Qualidade para cada tipo de exame de imagem.
+          </li>
+        </ul>
 
-      <T.UL>
-        <T.LI>
-          Corrigido o erro que exigia um novo login para que a assinatura
-          atualizada ficasse disponível.
-        </T.LI>
-        <T.LI>
-          Resolvida a falha onde imagens ocasionalmente não apareciam nos
-          documentos impressos.
-        </T.LI>
-        <T.LI>Corrigido o erro que impedia <T.Strong>renomear</T.Strong> arquivos anexados.</T.LI>
-        <T.LI>
-          Resolvido o problema de sincronia onde anexos recém-enviados não
-          apareciam imediatamente na lista.
-        </T.LI>
-      </T.UL>
+        <h3>Mudanças</h3>
+
+        <ul>
+          <li>
+            <strong>Fluxo de Salvamento:</strong> Ao salvar cadastros (paciente,
+            tutor, colaborador, consulta, etc.), o sistema{" "}
+            <strong>não redireciona</strong> mais para a página anterior,
+            mantendo o usuário na página atual.
+          </li>
+        </ul>
+
+        <h3>Correção de Bugs</h3>
+
+        <ul>
+          <li>
+            Corrigido o erro que exigia um novo login para que a assinatura
+            atualizada ficasse disponível.
+          </li>
+          <li>
+            Resolvida a falha onde imagens ocasionalmente não apareciam nos
+            documentos impressos.
+          </li>
+          <li>
+            Corrigido o erro que impedia <strong>renomear</strong> arquivos
+            anexados.
+          </li>
+          <li>
+            Resolvido o problema de sincronia onde anexos recém-enviados não
+            apareciam imediatamente na lista.
+          </li>
+        </ul>
+      </>
     </>
   );
 }

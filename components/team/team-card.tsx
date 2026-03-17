@@ -1,4 +1,3 @@
-// components/team/team-card.tsx
 import { TeamMember } from '@/lib/types/team';
 import { Github, ExternalLink } from 'lucide-react';
 import Link from 'next/link';

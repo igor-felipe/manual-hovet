@@ -1,4 +1,3 @@
-import { TypographyContent } from "@/components/typography";
 import { cn } from "@/lib/utils";
 
 type ContentShellProps = {
@@ -25,7 +24,7 @@ export function ContentShell({
         className
       )}
     >
-      {<TypographyContent>{children}</TypographyContent>}
+      {<div className="content content-prose">{children}</div>}
     </div>
   );
 }

@@ -1,5 +1,3 @@
-import * as T from "@/components/typography";
-
 type ManualImageProps = {
   alt: string;
   src: string;
@@ -15,323 +13,373 @@ const ManualImage = ({
   height = "auto",
   maxWidth = 960,
 }: ManualImageProps) => (
-  <T.IMG
-    alt={alt}
-    src={src}
-    width={width}
-    height={height}
-    maxWidth={maxWidth}
-    className="my-6 rounded-lg border border-gray-300 bg-white p-1 shadow-[0_0_20px_5px_rgba(0,0,0,0.1)]"
-  />
+  <div className="justify-center">
+    <img
+      alt={alt}
+      src={src}
+      className="img my-6 rounded-lg border border-gray-300 bg-white p-1 shadow-[0_0_20px_5px_rgba(0,0,0,0.1)]"
+      style={{ width, height, maxWidth }}
+    />
+  </div>
 );
 
 export default function ManualPostContent() {
   return (
     <>
-      <T.HR />
-
-      <T.H2>1. Introdução</T.H2>
-
-      <T.P>
-        Este <T.Strong>manual</T.Strong> tem como objetivo orientar os usuários na{" "}
-        <T.Strong>configuração inicial</T.Strong>, <T.Strong>administração</T.Strong> e{" "}
-        <T.Strong>utilização completa</T.Strong> do sistema de gestão do Hospital
-        Veterinário da UFRPE. Aqui você encontrará instruções detalhadas para
-        cadastro, controle de acessos, registro de pacientes, consultas e
-        requisições.
-      </T.P>
-
-      <T.H2>2. Configuração Inicial e Administração do Sistema</T.H2>
-
-      <T.P>
-        A etapa inicial garante que as permissões e funções estejam corretamente
-        definidas para que o sistema seja utilizado com segurança e organização.
-      </T.P>
-
-      <T.H3>2.1 Criação e Cadastro de Cargos</T.H3>
-
-      <T.P>
-        Antes de cadastrar colaboradores (usuários), é necessário criar os cargos
-        que representam as funções dos colaboradores dentro do hospital.
-      </T.P>
-
-      <T.UL>
-        <T.LI>Acesse a <T.Strong>tela inicial</T.Strong>.</T.LI>
-        <T.LI>Selecione <T.Strong>Cargos</T.Strong>.</T.LI>
-      </T.UL>
-
-      <ManualImage alt="Tela de cargos" src="/manual/image1.png" />
-
-      <T.UL>
-        <T.LI>Cadastre cada cargo (ex.: Médico Veterinário, etc.).</T.LI>
-        <T.LI>Insira as informações de nome do cargo.</T.LI>
-        <T.LI>
-          É possível especificar uma permissão para cada recurso do sistema.
-        </T.LI>
-        <T.LI>
-          Selecione a área médica (é possível inserir mais de uma área).
-        </T.LI>
-      </T.UL>
-
-      <ManualImage alt="Cadastro de cargo" src="/manual/image2.png" />
-
-      <T.H3>2.2 Funções do Cargo de Admin (Administrador do sistema)</T.H3>
-
-      <T.P>
-        Um colaborador do hospital é designado pela direção do hospital para o
-        cargo de Admin. O administrador possui <T.Strong>responsabilidades essenciais</T.Strong>:
-      </T.P>
-
-      <T.UL>
-        <T.LI>Cadastro de usuários.</T.LI>
-        <T.LI>Atribuição e edição dos cargos de cada usuário.</T.LI>
-        <T.LI>
-          Controle de permissões: cada cargo determina o que o usuário pode acessar
-          e executar no sistema.
-        </T.LI>
-      </T.UL>
-
-      <T.H3>2.3 Cadastro de Colaboradores (Usuários)</T.H3>
-
-      <T.P>Para cadastrar um novo colaborador:</T.P>
-
-      <T.OL>
-        <T.LI>Acesse a <T.Strong>tela inicial</T.Strong>.</T.LI>
-        <T.LI>Clique no ícone de <T.Strong>Colaboradores</T.Strong>.</T.LI>
-        <T.LI>Preencha os dados obrigatórios.</T.LI>
-        <T.LI>Atribua um cargo ao usuário.</T.LI>
-        <T.LI>
-          CRMV – é possível informar <T.Strong>ZP</T.Strong> (zootecnista) ou{" "}
-          <T.Strong>VP</T.Strong> (veterinário).
-        </T.LI>
-        <T.LI>É possível também inserir a assinatura digital.</T.LI>
-        <T.LI>Salve o cadastro.</T.LI>
-      </T.OL>
-
-      <ManualImage alt="Cadastro de colaboradores" src="/manual/image4.png" />
-
-      <T.HR />
-
-      <T.H2>3. Fluxo de Cadastro de Pacientes e Pré-requisitos</T.H2>
-
-      <T.P>
-        Para registrar consultas, agendamentos ou animais, siga a ordem correta de
-        cadastro.
-      </T.P>
-
-      <T.H3>3.1 Cadastro do Tutor (Pré-requisito)</T.H3>
-
-      <T.P>Antes de registrar animais ou consultas:</T.P>
-
-      <T.UL>
-        <T.LI>Vá até <T.Strong>a tela incial</T.Strong>.</T.LI>
-        <T.LI>Clique em <T.Strong>Tutores</T.Strong>.</T.LI>
-        <T.LI>
-          Preencha os dados básicos (nome, CPF, e-mail, telefone e endereço) e{" "}
-          <T.Strong>salve</T.Strong>.
-        </T.LI>
-      </T.UL>
-
-      <ManualImage alt="Cadastro de tutor" src="/manual/image6.png" />
-
-      <T.H3>3.2 Pesquisa de Tutor</T.H3>
-
-      <T.P>Antes de cadastrar um novo tutor, pesquise para evitar duplicidades:</T.P>
-
-      <T.UL>
-        <T.LI>Utilize o <T.Strong>campo de busca</T.Strong>.</T.LI>
-        <T.LI>
-          A pesquisa pode ser feita por nome, CPF, telefone, entre outros.
-        </T.LI>
-      </T.UL>
-
-      <ManualImage alt="Pesquisa de tutor" src="/manual/image8.png" />
-
-      <T.H3>3.3 Cadastro de Animais</T.H3>
-
-      <T.P>Após o tutor estar cadastrado:</T.P>
-
-      <T.OL>
-        <T.LI>
-          Essa tela lista todos os animais cadastrados que são vinculados ao tutor.
-          Clique no botão para adicionar um <T.Strong>novo animal</T.Strong> para esse tutor.
-        </T.LI>
-      </T.OL>
-
-      <ManualImage alt="Lista de animais" src="/manual/image10.png" />
-
-      <T.OL startNumber={2}>
-        <T.LI>
-          Informe dados como nome, espécie, raça, esterilizado (castrado), sexo,
-          data de nascimento.
-        </T.LI>
-        <T.LI>
-          <T.Strong>Salve</T.Strong> o registro.
-        </T.LI>
-      </T.OL>
-
-      <T.HR />
-
-      <T.H2>4. Registro e Gestão de Consultas</T.H2>
-
-      <T.P>
-        O sistema organiza o histórico e permite registrar novas consultas de forma
-        prática.
-      </T.P>
-
-      <T.H3>4.1 Acesso ao Histórico de Consultas</T.H3>
-
-      <T.UL>
-        <T.LI>Acesse <T.Strong>pacientes</T.Strong>.</T.LI>
-        <T.LI>Selecione o <T.Strong>animal desejado</T.Strong>.</T.LI>
-        <T.LI>
-          O sistema exibirá todo o histórico de consultas, procedimentos ou
-          requisições realizadas.
-        </T.LI>
-      </T.UL>
-
-      <ManualImage alt="Histórico de consultas" src="/manual/image12.png" />
-
-      <T.H3>4.2 Criação de Nova Consulta</T.H3>
-
-      <T.P>Para iniciar uma nova consulta:</T.P>
-
-      <T.OL>
-        <T.LI>Entre no perfil do paciente.</T.LI>
-        <T.LI>Clique em <T.Strong>Registrar</T.Strong>.</T.LI>
-        <T.LI>
-          Em seguida em <T.Strong>Registrar Consulta.</T.Strong>
-        </T.LI>
-      </T.OL>
-
-      <ManualImage alt="Nova consulta" src="/manual/image14.png" />
-
-      <T.H3>4.3 Registro da Consulta</T.H3>
-
-      <T.P>Durante o preenchimento:</T.P>
-
-      <T.UL>
-        <T.LI>
-          Preencha todos os <T.Strong>campos obrigatórios</T.Strong>, como Área, tipo
-          de consulta, peso do animal e caso tenha sido uma consulta externa (fora
-          do hospital), insira a distância.
-        </T.LI>
-        <T.LI>
-          É possível incluir ou diagnóstico temporário e/ou definitivo da consulta,
-          mas é obrigatório inserir ao menos um.
-        </T.LI>
-        <T.LI>Para inserir as requisições, selecione o ícone.</T.LI>
-      </T.UL>
-
-      <ManualImage alt="Registro da consulta" src="/manual/image16.png" />
-
-      <T.H3>4.4 Anamnese e Exame Físico</T.H3>
-
-      <T.UL>
-        <T.LI>O sistema permite inserir <T.Strong>textos personalizados</T.Strong>.</T.LI>
-        <T.LI>
-          Modelos de anamnese e exame físico podem ser utilizados para agilizar o
-          processo – veja na secção “Modelos de texto”.
-        </T.LI>
-      </T.UL>
-
-      <ManualImage alt="Anamnese e exame físico" src="/manual/image18.png" />
-
-      <T.HR />
-
-      <T.H2>5. Requisições e Configuração de Itens</T.H2>
-
-      <T.P>
-        As requisições estão integradas ao registro da consulta e incluem exames,
-        procedimentos e solicitações internas.
-      </T.P>
-
-      <T.H3>5.1 Inclusão de Nova Requisição (Somente Admin)</T.H3>
-
-      <T.P>Se algum item não existir no sistema:</T.P>
-
-      <T.OL>
-        <T.LI>
-          O administrador deve acessar <T.Strong>Configurações</T.Strong>.
-        </T.LI>
-        <T.LI>
-          Selecionar <T.Strong>Tipo</T.Strong> (ex.: Anestesiologia).
-        </T.LI>
-        <T.LI>Cadastrar o novo item.</T.LI>
-      </T.OL>
-
-      <ManualImage alt="Configurações de requisição" src="/manual/image20.png" />
-
-      <T.UL>
-        <T.LI>
-          O sistema exibirá todas as requisições disponíveis daquela área.
-        </T.LI>
-        <T.LI>Novas requisições podem ser adicionadas conforme necessário.</T.LI>
-      </T.UL>
-
-      <T.H3>5.2 Inclusão de Novas Áreas</T.H3>
-
-      <T.P>Caso surja uma nova especialidade ou setor:</T.P>
-
-      <T.OL>
-        <T.LI>
-          Acesse <T.Strong>Configurações</T.Strong>.
-        </T.LI>
-      </T.OL>
-
-      <ManualImage alt="Configurações" src="/manual/image22.png" />
-
-      <T.OL startNumber={2}>
-        <T.LI>Selecione <T.Strong>Áreas</T.Strong>.</T.LI>
-        <T.LI>Cadastre a nova área.</T.LI>
-      </T.OL>
-
-      <T.HR />
-
-      <T.H2>6. Modelos de Texto</T.H2>
-
-      <T.H3>6.1 O que são Modelos de texto?</T.H3>
-
-      <T.P>
-        Os <T.Strong>modelos de texto</T.Strong> permitem agilizar o preenchimento de
-        consultas, procedimentos, documentos, receituários e requisições. Eles
-        funcionam como textos pré-formatados onde o usuário pode inserir{" "}
-        <T.Strong>tags automáticas</T.Strong>, que são preenchidas pelo sistema conforme
-        os dados do paciente, tutor ou profissional.
-      </T.P>
-
-      <T.UL>
-        <T.LI>Selecione <T.Strong>Modelos</T.Strong>.</T.LI>
-      </T.UL>
-
-      <ManualImage alt="Modelos de texto" src="/manual/image24.png" />
-
-      <T.UL>
-        <T.LI>Escolha o tipo de modelo desejado.</T.LI>
-      </T.UL>
-
-      <T.H3>6.2 Utilização de Tags Automáticas</T.H3>
-
-      <T.P>
-        Ao criar ou editar um modelo, é possível inserir <T.Strong>tags personalizadas</T.Strong>.
-        Essas tags são substituídas automaticamente pelos dados reais quando o
-        modelo é utilizado em uma consulta ou procedimento.
-      </T.P>
-
-      <T.P>
-        As tags ajudam a <T.Strong>padronizar documentos</T.Strong> e <T.Strong>reduzir
-          tempo de digitação</T.Strong>.
-      </T.P>
-
-      <T.P>Exemplos de tags disponíveis:</T.P>
-
-      <ManualImage alt="Exemplos de tags" src="/manual/image26.png" />
-
-      <T.P>Clique no ícone abaixo para criar:</T.P>
-
-      <T.P>Em seguida, clique no ícone “Atualizar” para verificar o resultado:</T.P>
-
-      <ManualImage alt="Atualizar modelo" src="/manual/image28.png" />
+      <article data-manual-content="true">
+        <hr />
+
+        <h2>Introdução</h2>
+
+        <p>Aqui você encontrará instruções gerais sobre o SIG-HOVET.</p>
+
+        <p>
+          Sempre que você não encontrar uma tela ou um botão que aparece neste
+          manual, o motivo mais comum é <strong>permissão do seu cargo</strong>.
+          Nesse caso, fale com o administrador do sistema (cargo{" "}
+          <strong>admin</strong>).
+        </p>
+
+        <h2>Configuração Inicial</h2>
+
+        <h3>Cargos do sistema</h3>
+
+        <p>
+          Antes de cadastrar colaboradores (usuários), é necessário criar os
+          cargos que representam suas funções dentro do hospital. Cada cargo
+          define as permissões do usuário para os <strong>recursos</strong> do
+          sistema.
+        </p>
+
+        <ul>
+          <li>
+            Se um recurso ficar sem permissão definida, o usuário não poderá nem
+            mesmo visualizá-lo.
+          </li>
+          <li>
+            <strong>Ler registros:</strong> permite apenas visualizar o recurso.
+          </li>
+          <li>
+            <strong>Atualizar registros:</strong> permite visualizar, cadastrar,
+            editar e excluir registros, quando essa opção existir.
+          </li>
+          <li>
+            As telas e os menus exibidos no sistema variam de acordo com as
+            permissões atribuídas ao cargo.
+          </li>
+        </ul>
+
+        <h5>Paciente</h5>
+        <ul>
+          <li>
+            <strong>Ler registros:</strong> permite apenas visualizar os
+            cadastros de pacientes.
+          </li>
+          <li>
+            <strong>Atualizar registros:</strong> permite visualizar e atualizar
+            os cadastros de pacientes.
+          </li>
+        </ul>
+
+        <h5>Consultas</h5>
+        <ul>
+          <li>
+            <strong>Ler registros:</strong> permite apenas visualizar os
+            registros de consulta.
+          </li>
+          <li>
+            <strong>Atualizar registros:</strong> permite visualizar e atualizar
+            os registros de consulta.
+          </li>
+          <li>
+            <strong>Regra adicional:</strong> o usuário só pode atualizar as
+            próprias consultas. O mesmo vale para as requisições vinculadas a
+            elas.
+          </li>
+        </ul>
+
+        <h5>Imagem</h5>
+        <ul>
+          <li>
+            <strong>Ler registros:</strong> permite apenas visualizar os
+            registros de exames de imagem.
+          </li>
+          <li>
+            <strong>Atualizar registros:</strong> permite visualizar e atualizar
+            os registros de exames de imagem
+          </li>
+          <li>
+            <strong>Atualizar configurações:</strong> permite inserir, atualizar
+            ou remover itens da lista de exames de imagem, disponível nas
+            configurações do sistema.
+          </li>
+        </ul>
+
+        <ManualImage alt="Cadastro de colaboradores" src="/manual/cargos.png" />
+
+        <h3>Funções do Cargo de Admin</h3>
+
+        <p>
+          Um colaborador do hospital é designado pela direção do hospital para o
+          cargo de Admin. O administrador possui{" "}
+          <strong>responsabilidades essenciais</strong>:
+        </p>
+
+        <ul>
+          <li>Cadastro de usuários.</li>
+          <li>Atribuição e edição dos cargos de cada usuário.</li>
+          <li>Configurar o sistema.</li>
+          <li>Gerar o relatório para o FORDHOV.</li>
+          <li>Redefinir as senhas dos usuários.</li>
+        </ul>
+
+        <h3>Cadastro de Colaboradores</h3>
+
+        <ul>
+          <li>
+            É possível inserir a assinatura/carimbo que será usado dentro do
+            sistema.
+          </li>
+          <li>
+            CRMV – <strong>ZP</strong> (zootecnista) ou <strong>VP</strong>{" "}
+            (veterinário).
+          </li>
+        </ul>
+
+        <ManualImage
+          alt="Cadastro de colaboradores"
+          src="/manual/colaborador.png"
+        />
+
+        <hr />
+
+        <h2>Cadastro de Pacientes e Tutor</h2>
+
+        <p>É necesśario cadastrar o tutor antes de cadastrar o paciente.</p>
+
+        <h3>Cadastro do Tutor</h3>
+
+        <p>
+          O endereço é preenchido automaticamente se o CEP estiver cadastrado
+          nos correios.
+        </p>
+
+        <ManualImage alt="Cadastro de tutor" src="/manual/image6.png" />
+
+        <h3>Cadastro de Pacientes</h3>
+
+        <p>
+          Ao selecionar o tutor, é exibido uma lista de todos os animais
+          cadastrados que são vinculados ao tutor. Clique no botão ＋ para
+          adicionar um <strong>novo animal</strong> para esse tutor.
+        </p>
+
+        <ManualImage alt="Lista de animais" src="/manual/image10.png" />
+
+        <h3>Número de prontuário</h3>
+        <p>
+          O número de prontuário será definido automaticamente para novos
+          pacientes se você deixar esse campo em branco. Ele será o próximo
+          número da sequência, considerando o último cadastro anterior a
+          implantação do sistema. Digamos que esse número é 23.000. O próximo
+          cadastro será 23.001. Não será permitido definir números acima de
+          23.000. Se o paciente é anterior a implantação do sistema, então sua
+          numeração tem que ser menor ou igual a 23.000.
+        </p>
+
+        <p>
+          Um <strong>digito verificador</strong> será acrescentado
+          automaticamente para corrigir erros de digitação. Ex: 23.000-3. O 3 é
+          o digito verificador. Ele faz parte do número de prontuário e não pode
+          ser omitido.
+        </p>
+
+        <h3>Tipos de cadastro de paciente</h3>
+
+        <ul>
+          <li>
+            <strong>Individual</strong>: usado para um animal específico.
+          </li>
+          <li>
+            <strong>Coletivo</strong>: usado para rebanho.
+          </li>
+        </ul>
+
+        <h3>Status do Paciente</h3>
+        <p>
+          Status inativo é para pacientes que vieram a óbito ou para cadastros
+          feitos por equívoco. Não é possível fazer nenhum tipo de atendimento
+          para esse paciente.
+        </p>
+
+        <h3>Endereço do paciente diferente do endereço do tutor</h3>
+        <p>
+          O endereço do paciente pode ser diferente do endereço do tutor.
+          Inicialmente o endereço do tutor será copiado para o paciente, mas
+          poderá ser modificado.
+        </p>
+
+        <hr />
+
+        <h2>Atendimento e Histórico do paciente</h2>
+        <p>
+          A tela de atendimento tem todas as informações e serviços relacionado
+          ao paciente
+        </p>
+
+        <ManualImage alt="Histórico de consultas" src="/manual/image12.png" />
+
+        <h3>Criação de Nova Consulta</h3>
+
+        <p>
+          Para iniciar uma nova consulta você deve primeiro selecionar o
+          paciente para acessar a tela de Atendimento. Na guia de consultas,
+          clique no botão ＋
+        </p>
+
+        <ManualImage alt="Nova consulta" src="/manual/image14.png" />
+
+        <p>
+          Na primeira consuta o sistema exigi um registro mínimo do atendimento,
+          como anamnese, exame físico, diagnóstico, prognóstico, tratamento e
+          prescrição.
+        </p>
+
+        <h3>Consultas de retorno</h3>
+
+        <p>
+          Uma <strong>consulta de retorno</strong> é usada quando o atendimento
+          está ligado a uma consulta anterior, como parte de um tratamento.
+        </p>
+
+        <p>
+          Para evitar registros duplicados, o sistema bloquea uma nova consulta
+          no mesmo dia da mesma área e mesmo paciente.
+        </p>
+
+        <h3>Bloqueio de edição</h3>
+
+        <p>
+          Apenas quem registrou a consulta pode atualizar/editar a consulta.
+        </p>
+
+        <h3>Requisições</h3>
+
+        <h3>Regras importantes das requisições</h3>
+
+        <ul>
+          <li>
+            As requisições estão integradas ao registro da consulta e são para
+            exames e procedimentos que serão realizados no hospital, portanto
+            estão limitadas aos exames e procedimentos autorizados e disponíveis
+            no hospital.
+          </li>
+          <li>
+            Para evitar duplicidade, se você requisitar novamente o mesmo item
+            na mesma consulta, o sistema tende irá
+            <strong>atualizar a requisição existente</strong> em vez de criar
+            outra.
+          </li>
+          <li>
+            É possível desativar uma requisição. Isso impede de registrar um
+            procedimento/ exame a partir dela.
+          </li>
+          <li>
+            Não é possível desativar uma requisição se existir um procedimento /
+            exame vinculado a ela.
+          </li>
+          <li>
+            É possível deletar a requisição apenas se a consulta ainda não foi
+            salva / criada.
+          </li>
+        </ul>
+
+        <hr />
+
+        <h2>Configurações do Sistema</h2>
+
+        <p>
+          Nas <strong>Configurações do Sistema</strong> ficam os listas de
+          exames, procedimentos espécies e áreas disponível no sistema. Essa
+          seção aparece no menu apenas para cargos que têm permissão para ver
+          pelo menos um tipo de configuração.
+        </p>
+        <p>Não será possível cadastrar um paciente Felino se:</p>
+        <ul>
+          <li>Felino não estiver listado na lista de espécies</li>
+          <li>Felino está listado e desativado.</li>
+        </ul>
+        <p>Não será possível registrar um procedimento de ultrasson:</p>
+        <ul>
+          <li>Se ultrasson não estiver listado na lista de exames de imagem</li>
+          <li>Se ultrasson estiver listado e desativado.</li>
+        </ul>
+
+        <hr />
+
+        <h2>Modelos</h2>
+
+        <p>
+          Os <strong>modelos</strong> permitem agilizar o preenchimento de
+          consultas, procedimentos, documentos, receituários e requisições. Eles
+          funcionam como textos pré-formatados onde o usuário pode inserir{" "}
+          <strong>tags automáticas</strong>, que são preenchidas pelo sistema
+          conforme os dados do paciente.
+        </p>
+
+        <h3>Utilização das Tags</h3>
+
+        <p>
+          Ao criar ou editar um modelo, é possível inserir{" "}
+          <strong>tags personalizadas</strong>. Essas tags são substituídas
+          automaticamente pelos dados reais quando o modelo é utilizado em uma
+          consulta ou procedimento.
+        </p>
+
+        <p>Exemplos de tags disponíveis:</p>
+
+        <ManualImage alt="Exemplos de tags" src="/manual/image26.png" />
+
+        <ManualImage alt="Atualizar modelo" src="/manual/image28.png" />
+
+        <p>
+          Em seguida, clique em <strong>substituir</strong> para verificar o
+          resultado
+        </p>
+        <div className="w-80">
+          <ManualImage alt="Exemplos de tags" src="/manual/substituir.png" />
+        </div>
+
+        <hr />
+
+        <h2>Procedimentos</h2>
+
+        <p>
+          Procedimentos e exames são, em geral, iniciados a partir de uma
+          requisição.
+        </p>
+
+        <ul>
+          <li>
+            O tipo de procedimento que aparece para você depende das permissões
+            do seu cargo.
+          </li>
+          <li>
+            Alguns procedimentos têm exigências específicas. Exemplo: em
+            necropsia, é obrigatório registrar o <strong>peso</strong>.
+          </li>
+        </ul>
+
+        <hr />
+        {/* 
+        <h2>Dispositivos Conectados</h2>
+
+        <p>
+          Em <strong>Dispositivos Conectados</strong>, você pode ver os acessos
+          do seu usuário. Se notar um acesso que não reconhece, procure o
+          administrador e troque sua senha.
+        </p> */}
+      </article>
     </>
   );
 }

@@ -1,51 +1,50 @@
-import * as T from "@/components/typography";
 
 export default function SuporteContent() {
   return (
     <>
-      <T.HR />
+      <hr />
 
-      <T.P>
+      <p>
         Este canal destina-se ao registro de problemas técnicos, dúvidas
         operacionais e solicitações relacionadas ao uso.
-      </T.P>
+      </p>
 
-      <T.HR />
+      <hr />
 
-      <T.H2>Quando acionar o suporte</T.H2>
+      <h2>Quando acionar o suporte</h2>
 
-      <T.P>Utilize o suporte para:</T.P>
-      <T.UL>
-        <T.LI>Erros ou falhas de funcionamento</T.LI>
-        <T.LI>Dúvidas sobre uso de funcionalidades</T.LI>
-        <T.LI>Problemas com dados ou visualizações</T.LI>
-        <T.LI>Relato de comportamento inesperado</T.LI>
-      </T.UL>
+      <p>Utilize o suporte para:</p>
+      <ul>
+        <li>Erros ou falhas de funcionamento</li>
+        <li>Dúvidas sobre uso de funcionalidades</li>
+        <li>Problemas com dados ou visualizações</li>
+        <li>Relato de comportamento inesperado</li>
+      </ul>
 
-      <T.HR />
+      <hr />
 
-      <T.H2>Como registrar uma solicitação</T.H2>
+      <h2>Como registrar uma solicitação</h2>
 
-      <T.P>Ao entrar em contato, informe preferencialmente:</T.P>
-      <T.UL>
-        <T.LI>Descrição clara do problema</T.LI>
-        <T.LI>Passos para reproduzir (se aplicável)</T.LI>
-        <T.LI>Área afetada (Funcionalidade / Dados / Infraestrutura)</T.LI>
-        <T.LI>Ambiente (navegador, dispositivo, versão)</T.LI>
-        <T.LI>Evidências (prints, logs, links)</T.LI>
-      </T.UL>
+      <p>Ao entrar em contato, informe preferencialmente:</p>
+      <ul>
+        <li>Descrição clara do problema</li>
+        <li>Passos para reproduzir (se aplicável)</li>
+        <li>Área afetada (Funcionalidade / Dados / Infraestrutura)</li>
+        <li>Ambiente (navegador, dispositivo, versão)</li>
+        <li>Evidências (prints, logs, links)</li>
+      </ul>
 
-      <T.HR />
+      <hr />
 
-      <T.H2>Canal de contato</T.H2>
+      <h2>Canal de contato</h2>
 
-      <T.P>
+      <p>
         Email: suporte@exemplo.com
-        <T.BR />
+        <br />
         Ou: link para formulário / issue tracker
-      </T.P>
+      </p>
 
-      <T.HR />
+      <hr />
     </>
   );
 }
