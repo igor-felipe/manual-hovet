@@ -221,7 +221,7 @@ export default function ManualSidebarLayout({ children }: PropsWithChildren) {
       </Sidebar>
 
       <SidebarInset className="min-h-svh bg-transparent">
-        <SidebarTrigger className="fixed top-2 left-2 z-50 bg-emerald-900/90 text-white backdrop-blur-sm hover:bg-emerald-800/90" />
+        <SidebarTrigger className="fixed top-4.5 left-2 z-50 bg-emerald-900/90 text-white backdrop-blur-sm hover:bg-emerald-900/90 hover:text-white/70" />
         <div className="">{children}</div>
       </SidebarInset>
     </SidebarProvider>

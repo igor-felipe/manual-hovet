@@ -16,12 +16,14 @@ export function ContentShell({
       className={cn(
         [
           "mx-auto w-full",
-          fullWidth ? "max-w-none" : "max-w-[72ch] sm:max-w-[96ch] lg:max-w-[120ch]",
+          fullWidth
+            ? "max-w-none"
+            : "max-w-[72ch] sm:max-w-[96ch] lg:max-w-[120ch]",
           "px-4 xl:px-10 pb-8",
-          "rounded-sm border-gray-200 bg-white shadow-lg",
+          "bg-white rounded-none shadow-none border-0 sm:rounded-sm sm:shadow-lg sm:border sm:border-gray-200",
         ].join(" "),
         fullWidth && "w-full",
-        className
+        className,
       )}
     >
       {<div className="content content-prose">{children}</div>}
