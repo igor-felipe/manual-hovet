@@ -4,14 +4,27 @@ export default function ReleasesContent() {
       <>
         <hr />
         <p>
+          <em>24/03/2026</em>
+        </p>
+        <ul>
+          <li>Atualização do manual</li>
+        </ul>
+      </>
+      <>
+        <hr />
+        <p>
           <em>18/03/2026</em>
         </p>
         <ul>
-          <li>A tag de cabeçalho agora usa o logo do DMV-UFRPE ao invés do logo da medicina veterinária </li>
+          <li>
+            A tag de cabeçalho agora usa o logo do DMV-UFRPE ao invés do logo da
+            medicina veterinária{" "}
+          </li>
           <li>Adição de tag de rodapé</li>
           <li>As tags dos modelos foram renomeadas e reorganizadas</li>
           <li>
-            Corrigido o problema de algumas tags que não eram substituídas pelos valores reais. 
+            Corrigido o problema de algumas tags que não eram substituídas pelos
+            valores reais.
           </li>
         </ul>
       </>
