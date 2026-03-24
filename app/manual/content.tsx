@@ -189,9 +189,10 @@ export default function ManualPostContent() {
 
         <p>
           Um <strong>digito verificador</strong> será acrescentado
-          automaticamente para corrigir erros de digitação. Ex: 23.000-3. O 3 é
-          o digito verificador. Ele faz parte do número de prontuário e não pode
-          ser omitido.
+          automaticamente no final do número do prontuário. Ele serve verificar
+          se existem erros de digitação. Ex: 23.000-3. O 3 é o digito
+          verificador. Ele faz parte do número de prontuário e não pode ser
+          omitido.
         </p>
 
         <h3>Tipos de cadastro de paciente</h3>
@@ -224,36 +225,76 @@ export default function ManualPostContent() {
         <h2>Atendimento e Histórico do paciente</h2>
         <p>
           A tela de atendimento tem todas as informações e serviços relacionado
-          ao paciente
+          ao paciente.
         </p>
 
-        <ManualImage alt="Histórico de consultas" src="/manual/image12.png" />
+        <h3>Atendimento - Paciente</h3>
+        <p>
+          <strong>Grafico de pesagem:</strong> É possível registar o peso do
+          paciente a cada consulta, procedimento e exame realizado. Os pesos
+          mais recentes de cada dia serão exibidos no gráfico.
+        </p>
 
-        <h3>Criação de Nova Consulta</h3>
+        <h3>Atendimento - Consultas</h3>
 
         <p>
-          Para iniciar uma nova consulta você deve primeiro selecionar o
-          paciente para acessar a tela de Atendimento. Na guia de consultas,
-          clique no botão ＋
+          A guia <strong>Consultas</strong> lista todas as consultas do
+          paciente. Clique no botão ＋ para iniciar uma nova consulta.
+        </p>
+
+        <p>
+          Ative <strong>Minhas Consultas</strong> para filtrar as consultas que
+          você registrou para esse paciente.
         </p>
 
         <ManualImage alt="Nova consulta" src="/manual/image14.png" />
 
+        <h3>Atendimento - Procedimentos / exames</h3>
+
         <p>
-          Na primeira consuta o sistema exigi um registro mínimo do atendimento,
-          como anamnese, exame físico, diagnóstico, prognóstico, tratamento e
-          prescrição.
+          A guia <strong>Procedimentos</strong> lista todas as procedimentos do
+          paciente. Clique no botão ＋ para iniciar um novo procedimento.
         </p>
+
+        <p>
+          Ative <strong>Minhas Procedimentos</strong> para filtrar as
+          procedimentos que você registrou para esse paciente.
+        </p>
+
+        <h3>Atendimento - Requsições</h3>
+
+        <p>
+          A guia <strong>Requsições</strong> lista todas as requsições do
+          paciente. É possível acessar a consulta que deu origem a uma requsição
+          ou abrir um registro de procedimento a partir de uma requsição.
+        </p>
+
+        <p>
+          Ative <strong>Minhas Requsições</strong> para filtrar as requsições
+          que você registrou para esse paciente. Esses documentos não ficam
+          salvos no sistema.
+        </p>
+
+        <h3>Atendimento - Termos</h3>
+
+        <p>
+          Na guia <strong>Termos</strong> você poderá imprimir termos e
+          declarações para esse paciente.
+        </p>
+
+        <hr />
+
+        <h2>Consultas</h2>
 
         <h3>Consultas de retorno</h3>
 
         <p>
-          Uma <strong>consulta de retorno</strong> é usada quando o atendimento
-          está ligado a uma consulta anterior, como parte de um tratamento.
+          O campo <strong>Retorno de</strong> permite relacionar a consulta
+          atual com uma consulta anterior.
         </p>
 
         <p>
-          Para evitar registros duplicados, o sistema bloquea uma nova consulta
+          Para evitar registros duplicados, o sistema bloqueia uma nova consulta
           no mesmo dia da mesma área e mesmo paciente.
         </p>
 
@@ -263,7 +304,9 @@ export default function ManualPostContent() {
           Apenas quem registrou a consulta pode atualizar/editar a consulta.
         </p>
 
-        <h3>Requisições</h3>
+        <hr />
+
+        <h2>Requisições</h2>
 
         <h3>Regras importantes das requisições</h3>
 
@@ -296,6 +339,26 @@ export default function ManualPostContent() {
 
         <hr />
 
+        <h2>Procedimentos</h2>
+
+        <p>
+          Procedimentos e exames são, em geral, iniciados a partir de uma
+          requisição.
+        </p>
+
+        <ul>
+          <li>
+            O tipo de procedimento que aparece para você depende das permissões
+            do seu cargo.
+          </li>
+          <li>
+            Alguns procedimentos têm exigências específicas. Exemplo: em
+            necropsia, é obrigatório registrar o <strong>peso</strong>.
+          </li>
+        </ul>
+
+        <hr />
+
         <h2>Configurações do Sistema</h2>
 
         <p>
@@ -313,6 +376,13 @@ export default function ManualPostContent() {
         <ul>
           <li>Se ultrasson não estiver listado na lista de exames de imagem</li>
           <li>Se ultrasson estiver listado e desativado.</li>
+        </ul>
+
+        <p>Não será possível registrar uma consulta de Dermatologia:</p>
+        <ul>
+          <li>Se Dermatologia não estiver listado na lista de Áreas</li>
+          <li>Se Dermatologia estiver listado e desativado.</li>
+          <li>Se o colaborador não tiver Dermatologia no cargo.</li>
         </ul>
 
         <hr />
@@ -352,25 +422,6 @@ export default function ManualPostContent() {
 
         <hr />
 
-        <h2>Procedimentos</h2>
-
-        <p>
-          Procedimentos e exames são, em geral, iniciados a partir de uma
-          requisição.
-        </p>
-
-        <ul>
-          <li>
-            O tipo de procedimento que aparece para você depende das permissões
-            do seu cargo.
-          </li>
-          <li>
-            Alguns procedimentos têm exigências específicas. Exemplo: em
-            necropsia, é obrigatório registrar o <strong>peso</strong>.
-          </li>
-        </ul>
-
-        <hr />
         {/* 
         <h2>Dispositivos Conectados</h2>
 
