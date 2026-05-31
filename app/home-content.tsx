@@ -43,6 +43,13 @@ export default function Content() {
                 <div className="pointer-events-none absolute bottom-0 left-0 lg:h-20 w-full bg-linear-to-t from-white via-white/70 to-transparent" />
               </div>
 
+              <a
+                href="/entrar"
+                className="inline-flex items-center rounded-md bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-700/50"
+              >
+                Teste o SIG-HOVET
+              </a>
+
               <p className="text-base leading-7 text-justify text-slate-700">
                 Uma plataforma completa de gestão clínica para hospitais
                 veterinários universitários, pensado para operar o hospital no
