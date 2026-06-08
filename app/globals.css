@@ -175,7 +175,7 @@
   }
 
   .content-prose ul > li {
-    @apply mt-2;
+    @apply mt-2 text-base leading-7 text-justify;
   }
 
   .content-prose ol {
@@ -183,7 +183,7 @@
   }
 
   .content-prose ol > li {
-    @apply mt-2;
+    @apply mt-2 text-base leading-7 text-justify;
   }
 
   .content-prose em {
