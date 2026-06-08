@@ -25,13 +25,9 @@ export const menuItems = {
   releases: { title: "Atualizações", url: "/releases" },
   // questions: { title: "Suporte", url: "/support" },
   team: { title: "Equipe", url: "/team" },
-  login: { title: "Entrar", url: "https://app.ipe.ufrpe.br/auth/signin" },
 };
 
-const navigationMenuItems = Object.fromEntries(
-  Object.entries(menuItems).filter(([key]) => key !== "login"),
-);
-const loginMenuItem = menuItems.login;
+const navigationMenuItems = menuItems;
 
 export const Menu = () => {
   const pathname = usePathname();
@@ -91,18 +87,10 @@ export const Menu = () => {
             </SelectContent>
           </Select>
         </div>
-
-        <a
-          href={loginMenuItem.url}
-          className="inline-flex h-10 items-center rounded-md border border-white/35 bg-white/10 px-3 text-sm font-medium text-white transition-colors hover:bg-white hover:text-emerald-900 focus:outline-none focus:ring-2 focus:ring-white/60"
-        >
-          {loginMenuItem.title}
-        </a>
       </div>
 
       {/* DESKTOP */}
-      <div className="hidden sm:flex items-center justify-between px-4 py-2 gap-2">
-        <div className="w-[108px]" />
+      <div className="hidden sm:flex items-center justify-center px-4 py-2 gap-2">
         <NavigationMenu>
           <div ref={navRef} className="relative">
             <NavigationMenuList className="gap-6">
@@ -132,12 +120,6 @@ export const Menu = () => {
             />
           </div>
         </NavigationMenu>
-        <a
-          href={loginMenuItem.url}
-          className="inline-flex h-10 items-center rounded-md border border-white/35 bg-white/10 px-4 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-emerald-900 focus:outline-none focus:ring-2 focus:ring-white/60"
-        >
-          {loginMenuItem.title}
-        </a>
       </div>
     </div>
   );

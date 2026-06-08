@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const BACKEND_HEALTH_URL = "https://prontuario-back.onrender.com/health";
-const FRONTEND_SIGNIN_URL = "https://prontuario-front.onrender.com/auth/signin";
+const FRONTEND_SIGNIN_URL = "https://sig-hovet.site/auth/signin";
 const INTERVAL_SECONDS = 5;
 
 type WakeUpStatus = "idle" | "checking" | "ready" | "unavailable" | "error";
