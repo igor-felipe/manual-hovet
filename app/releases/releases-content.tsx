@@ -4,6 +4,15 @@ export default function ReleasesContent() {
       <>
         <hr />
         <p>
+          <em>10/06/2026</em>
+        </p>
+        <ul>
+          <li>Atualização do manual</li>
+        </ul>
+      </>
+      <>
+        <hr />
+        <p>
           <em>24/03/2026</em>
         </p>
         <ul>
